@@ -7,7 +7,6 @@ const Contact = () => {
     <>
     <h1 className='contact-header' id='contact-header'>Contact</h1>
     <div className='contact-section'>        
-        {/* <div className={`contact-info ${!resumeOpen? "open" : ""}`}> */}
           <div className="contact-info-header">E-mail:
             <div className="contact-text">kalamorasarquivo@gmail.com</div>
           </div>
@@ -20,8 +19,7 @@ const Contact = () => {
           <a className='contact-button' href="https://wa.me/5511993909674" target="_blank" rel="noopener noreferrer">
             <img alt="Chat on WhatsApp" src={WhatsApp} />
           </a>
-        {/* </div> */}
-    </div>
+     </div>
     
     </>
   )

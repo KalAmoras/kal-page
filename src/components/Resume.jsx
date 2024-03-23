@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import circle from '../assets/circle.svg'
 import cv from '../assets/cv.pdf'
+import cv2 from '../assets/cv2.pdf'
 
 const Resume = ({language}) => {
 
@@ -12,16 +13,8 @@ const Resume = ({language}) => {
     const handleClick = (id) => {  
         let currentId = cardId
         setCardId(id)
-        console.log(currentId)
-        console.log(id)
     }
 
-     {/* <div className="resume-button" onClick={()=>handleClick()} >
-            <img id='resume-draw' src={circle}></img>
-        </div> */}
-        {/* <input type='checkbox' id='resume-button'></input> */}
-    
-    
   return (
     <>
         {language===1?
@@ -122,7 +115,12 @@ const Resume = ({language}) => {
                             <li className='list-item'>Birthdate: 09/29/1988</li>
                             <li className='list-item'>Nationality: Brazil</li>
                             <li className='list-item'>Residency: São Paulo</li>
-                            <a href={cv} id='download-link' download={cv}>Resume Download</a>                                    
+                            <li>
+                                <a href={cv} id='download-link' download={cv}>Resume Download</a> 
+                            </li>
+                            <li>
+                                <a href={cv2} id='download-link' download={cv2}>Certificates Download</a>                                   
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -223,11 +221,19 @@ const Resume = ({language}) => {
                     }}>Personal Info</div>
                     <div className="resume-content">
                         <ul className='list-title'>Cássio Jacques Santos Amoras
-                            <li className='list-item'>Desenvolvedor JavaScript Fullstack, Programador e Designer</li>
+                            <li className='list-item-job'>Desenvolvedor JavaScript Fullstack</li>
+                            <li className='list-item-job'>Programador e Designer</li>
+
                             <li className='list-item'>Data de nascimento: 29/09/1988</li>
                             <li className='list-item'>Nationality: Brazil</li>
                             <li className='list-item'>Residência: São Paulo</li>
-                            <a href={cv} id='download-link' download={cv}>Currículo para download</a>                                    
+                            <li>
+                                <a href={cv} id='download-link' download={cv}>Currículo para download</a>
+                            </li>
+                            <li>
+                                <a href={cv2} id='download-link' download={cv2}>Certificados para download</a>                   
+                            </li>
+                                   
                         </ul>
                     </div>
                 </div>
@@ -239,140 +245,3 @@ const Resume = ({language}) => {
 }
 
 export default Resume
-
-
- {/* <div className='resume-box'>
-            <div className='resume'>
-                <div className="resume-list">
-                    <div className='list-title'>Certifications</div>
-                    <div className='date-list'> Feb 2004 - Dec 2006
-                        <div className='item-list'>
-                        Highschool degree
-                        <br/>
-                        FECAP Highschool, São Paulo
-                        </div>
-                    </div>
-                    <div className='date-list'> Aug 2013 - Dec 2014
-                        <div className='item-list'>
-                        Graphic Design Tech degree
-                        <br/>
-                        Escola Panamericana de Artes
-                        </div>
-                    </div>
-                    <div className='date-list'> Fev 2021 - Sep 2023
-                        <div className='item-list'>
-                        System Analysis and Development Certification
-                        <br/>
-                        SENAI
-                        </div>
-                    </div>
-                </div>
-                <div className="resume-list">
-                    <div className='list-title'>Previous Experience</div>
-                    <div className='date-list'> Jan 2013 - Dec 2015
-                        <div className='item-list'>
-                            Dept Cult Dance Studio, São Paulo
-                            <br/>
-                            Administration and client service
-                        </div>
-                        </div>
-                        <div className='date-list'>Mar 2018 - Nov 2018
-                        <div className='item-list'>
-                            Escape Club, São Paulo
-                            <br/>
-                            Game master and client service
-                        </div>
-                        </div>
-                        <div className='date-list'>Sep 2013 - Present
-                        <div className='item-list'>
-                            Freelancing
-                            <br/>
-                            Graphic Designer
-                        </div>
-                    </div>
-                </div>         
-                <div className="resume-list">
-                    <div className='list-title'>Languages</div>
-                        <div className='language-item'>Portuguese     
-                        <br/>
-                        Native
-                        </div>
-                        <div className='language-item'>English 
-                        <br/> 
-                        Fluent
-                        </div>
-                        <div className='language-item'>Spanish 
-                        <br/>
-                        Intermediate
-                        </div>
-                </div>       
-            </div>
-        </div> */}
-
-
-        // <div className="resume-wrapper">            
-        //     <div className='resume-content'>
-        //         <div className='resume'>
-        //             <ul className='list-title'>Certifications
-        //                 <li className='date-list'>Feb 2004 - Dec 2006
-        //                     <ul>
-        //                         <li className='item-list'>Highschool degree</li>
-        //                         <li className='item-list'>FECAP Highschool, São Paulo</li>
-        //                     </ul>
-        //                 </li>
-        //                 <li className='date-list'>Aug 2013 - Dec 2014
-        //                     <ul>
-        //                         <li className='item-list'>Graphic Design Tech degree</li>
-        //                         <li className='item-list'>Escola Panamericana de Artes - EPA</li>
-        //                     </ul>
-        //                 </li>
-        //                 <li className='date-list'>Fev 2021 - Sep 2023
-        //                     <ul>
-        //                         <li className='item-list' id='cert-special'>System Analysis and Development Certification</li>
-        //                         <li className='item-list'>Sistema Nacional de Aprendizagem - SENAI</li>
-        //                     </ul>
-        //                 </li>           
-        //             </ul>
-        //             <ul className='list-title'>Previous Experience
-        //                 <li className='date-list'>Jan 2013 - Dec 2015
-        //                     <ul>
-        //                         <li className='item-list'>Dept Cult Dance Studio, São Paulo</li>
-        //                         <li className='item-list'>Administration, client service</li>
-        //                     </ul>
-        //                 </li>
-        //                 <li className='date-list'>Mar 2018 - Nov 2018
-        //                     <ul>
-        //                         <li className='item-list'>Escape Club, São Paulo</li>
-        //                         <li className='item-list'>Game master and client service</li>
-        //                     </ul>
-        //                 </li>
-        //                 <li className='date-list'>Sep 2013 - Present
-        //                     <ul>
-        //                         <li className='item-list'>Freelancing</li>
-        //                         <li className='item-list'>Graphic Designer</li>
-        //                     </ul>
-        //                 </li>           
-        //             </ul>
-        //             <ul className='list-title' id='language-list'>Languages
-        //                 <li className='language-item'>Portuguese</li>
-        //                 <li className='language-level'>Native</li>
-        //                 <li className='language-item'>English</li>  
-        //                 <li className='language-level'>Fluent</li>
-        //                 <li className='language-item'>Spanish</li>
-        //                 <li className='language-level'>Intermediate</li> 
-        //             </ul>
-
-        //         </div>
-        //         <div className="personal">
-        //             <ul className='list-title' id='personal-title'>Cássio Jacques Santos Amoras
-        //                 <li className='item-list'>Fullstack JavaScript Developer, Coder and Designer</li>
-        //                 <li className='item-list'>Birthdate: 29/09/1988</li>
-        //                 <li className='item-list'>Nationality: Brazil</li>
-        //                 <li className='item-list'>Residency: São Paulo</li>
-        //                 <a href={cv} id='download-link' download={cv}>Resume Download</a>
-
-                                  
-        //             </ul>
-        //         </div>
-        //     </div>
-        // </div>

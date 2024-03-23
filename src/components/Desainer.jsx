@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react'
 import './Desainer.css'
 import { ExpandingBox } from './ExpandingBox';
+import Projects from './Projects';
 import Splash from './Splash';
 import Skills from './Skills';
 import Navbar from './Navbar';
@@ -9,9 +10,6 @@ import Contact from './Contact';
 import brflag from '../assets/brflag.svg'
 import usflag from '../assets/usflag.svg'
 
-/*add name and info on resume
-insert projects, gifs, info, link
-800<view<450*/
 
 
 const Desainer = () => {
@@ -56,7 +54,6 @@ const Desainer = () => {
     const handleClickOutside = (e) => {
       if (projectRef.current && !projectRef.current.contains(e.target)) {
         setOpenBoxId(null);
-        // console.log("clicked outside project")
       }
     };    
     document.addEventListener('click', handleClickOutside);   
@@ -106,39 +103,9 @@ const Desainer = () => {
         language={language}
       />  
 
-      <div className="project-section">
-        <h1 className='project-header' id='project-header'>My Projects</h1>
-          <div className={`project-wrapper ${openBoxId ? 'expanded' : ''}`} ref={projectRef}>
-            <ExpandingBox 
-              boxId={1} 
-              onBoxOpen={setOpenBoxId} 
-              isOpen={openBoxId === 1} 
-              title={"Bug Ranger"}        
-              content={"A simple bug tracker made with React. Future iterations will feature more back-end capabilties."}  
-              />
-            <ExpandingBox 
-              boxId={2} 
-              onBoxOpen={setOpenBoxId} 
-              isOpen={openBoxId === 2}
-              title={"IP-Tracker"}        
-              content={"Coming soon"}          
-              />
-             <ExpandingBox 
-              boxId={3} 
-              onBoxOpen={setOpenBoxId} 
-              isOpen={openBoxId === 3} 
-              title={"Whats Cooking?"}        
-              content={"Coming soon"}  
-            />
-            <ExpandingBox 
-              boxId={4} 
-              onBoxOpen={setOpenBoxId} 
-              isOpen={openBoxId === 4}
-              title={"Overturner"}        
-              content={"Coming soon"}  
-              />
-          </div>
-        </div>
+      <Projects language={language}/>
+        
+      
       <Skills language={language}/>       
       
       <Resume
@@ -197,41 +164,9 @@ const Desainer = () => {
         content={`${splashId[2]}`}
         language={language}
       />  
+      <Projects language={language}/>
 
-      <div className="project-section">
-        <h1 className='project-header' id='project-header'>Meus Projetos</h1>
-          <div className={`project-wrapper ${openBoxId ? 'expanded' : ''}`} ref={projectRef}>
-            <ExpandingBox 
-              boxId={1} 
-              onBoxOpen={setOpenBoxId} 
-              isOpen={openBoxId === 1} 
-              content={"Um bug-tracker simples feito com React.js."}  
-              title={"Bug Ranger"}        
-              />
-            <ExpandingBox 
-              boxId={2} 
-              onBoxOpen={setOpenBoxId} 
-              isOpen={openBoxId === 2}
-              title={"IP-Tracker"}        
-              content={"Em breve"}          
-              />
-             <ExpandingBox 
-              boxId={3} 
-              onBoxOpen={setOpenBoxId} 
-              isOpen={openBoxId === 3} 
-              title={"Whats Cooking?"}        
-              content={"Em breve"}  
-            />
-            <ExpandingBox 
-              boxId={4} 
-              onBoxOpen={setOpenBoxId} 
-              isOpen={openBoxId === 4}
-              title={"Overturner"}        
-              content={"Em breve"}  
-              />
-          </div>
-        </div>
-        <Skills language={language}/>        
+      <Skills language={language}/>        
       
       <Resume
       language={language}/>
@@ -266,35 +201,3 @@ const Desainer = () => {
 };
 
 export default Desainer;
-
-
-/*const wrapper = document.querySelector('.wrapper');
-let scrollPosition = 0;
-
-// Function to handle scroll events (fake scroll)
-const handleScroll = (event) => {
-  // Update scroll position based on the scroll event
-  scrollPosition += event.deltaY; // Use event.deltaY for mouse scroll or other methods for keyboard input
-  
-  // Apply your scroll-dependent logic here
-  if (scrollPosition >= yourScrollThreshold) {
-    // Add a class or apply a transformation when scroll position reaches a certain threshold
-    wrapper.classList.add('transformed');
-  } else {
-    // Remove the class or revert the transformation when below the threshold
-    wrapper.classList.remove('transformed');
-  }
-};
-
-// Add a scroll event listener to the document or another relevant element
-document.addEventListener('wheel', handleScroll);
-
-// Optionally, you can also handle keyboard inputs (e.g., arrow keys or page down)
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'ArrowDown' || event.key === 'PageDown') {
-    // Simulate scrolling down using keyboard inputs
-    scrollPosition += yourKeyboardScrollAmount;
-    handleScroll({ deltaY: yourKeyboardScrollAmount });
-    event.preventDefault(); // Prevent default scrolling behavior
-  }
-});*/

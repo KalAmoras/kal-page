@@ -16,7 +16,6 @@ const Navbar = ({language}) => {
   let resumeTop = resume?.getBoundingClientRect().top - body
   let contactTop = contact?.getBoundingClientRect().top - body   
 
-  // const viewport = window.matchMedia("(max-width: 450px)")
   const viewport = window.matchMedia("(max-width: 800px)")
 
   const portMatch = viewport.matches
