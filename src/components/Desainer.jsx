@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
 import './Desainer.css'
-import { ExpandingBox } from './ExpandingBox';
 import Projects from './Projects';
 import Splash from './Splash';
 import Skills from './Skills';

@@ -223,7 +223,6 @@ const Resume = ({language}) => {
                         <ul className='list-title'>Cássio Jacques Santos Amoras
                             <li className='list-item-job'>Desenvolvedor JavaScript Fullstack</li>
                             <li className='list-item-job'>Programador e Designer</li>
-
                             <li className='list-item'>Data de nascimento: 29/09/1988</li>
                             <li className='list-item'>Nationality: Brazil</li>
                             <li className='list-item'>Residência: São Paulo</li>
