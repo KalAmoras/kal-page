@@ -43,8 +43,11 @@ const Navbar = ({language}) => {
     borderTop: '0px solid var(--dark-primary)',
     borderLeft:'0px solid var(--dark-primary)' ,
     borderBottom:'1px solid var(--dark-primary)' ,
-    borderRight:'0px solid var(--dark-primary)'
+    borderRight:'0px solid var(--dark-primary)',
+    fontSize: `${language === 1 ? '0.66rem' : '0.65rem' }`,
+    paddingRight: `${language === 1 ? '0rem' : '0.6rem' }`,
   }
+
 
   const styleActive = {
     borderTop: '1px solid var(--dark-primary)',
@@ -59,6 +62,8 @@ const Navbar = ({language}) => {
     borderLeft:'1px solid var(--dark-primary)' ,
     borderBottom:'0px solid var(--dark-primary)' ,
     borderRight:'1px solid var(--dark-primary)',
+    fontSize: `${language === 1 ? '0.66rem' : '0.65rem' }`,
+    paddingRight: `${language === 1 ? '0rem' : '0.3rem' }`,
     zIndex: '1006' 
   }
 
@@ -82,7 +87,7 @@ const Navbar = ({language}) => {
             style={skillBounding && portMatch ? stylePortActive 
               : skillBounding && !portMatch ? styleActive
               : !skillBounding && portMatch ? stylePort
-              : style }  
+              : style }             
         >{language===1? "Skills" : "Habilidades"}</div>
         <div className="nav-button" id="nav4" onClick={()=>handleClick('resume-header')}
             style={resumeBounding && portMatch ? stylePortActive 

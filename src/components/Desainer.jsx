@@ -116,7 +116,7 @@ const Desainer = () => {
         language={language}
       />  
 
-      <Contact/>          
+      <Contact language={language}/>          
 
       <div className="circle"></div>      
       <svg>
@@ -176,7 +176,7 @@ const Desainer = () => {
         language={language}
       />  
 
-      <Contact/>          
+      <Contact language={language}/>          
 
       <div className="circle"></div>      
       <svg>

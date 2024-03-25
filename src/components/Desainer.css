@@ -676,6 +676,7 @@ input{
     position: absolute;
     top: 5rem;
     color: var(--dark-primary);
+    backface-visibility: hidden;
   }
 
   ul{
@@ -1207,10 +1208,10 @@ input{
    .nav-button{
     color: var(--dark-primary);
     display: flex;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     font-weight: 300;
     cursor: pointer;
-    height:  1.2rem;
+    height:  1.4rem;
     width: 24vw;   
     z-index: 1000;
     writing-mode:horizontal-tb;
@@ -1224,7 +1225,7 @@ input{
   }
 
   .nav-button:nth-child(3){
-    padding-left: 0.4rem;
+    padding-left: 0.2rem;
   }
 
   .nav-button:nth-child(4){
@@ -1259,18 +1260,19 @@ input{
  
   #flag{
     position: absolute;
-    top: 0.8rem;
+    top: 1.2rem;
     right: 0rem;
-    width: 29px;
+    width: 50px;
+    height: 34px;
   }
 
   #usflag{
-    height: 18px;
-    width: 36px;
+    height: 30px;
+    width: 46px;
   }
   #brflag{
-    height: 20px;
-    width: 40px;
+    height: 30px;
+    width: 50px;
   }
 
   .about{
@@ -1352,6 +1354,21 @@ input{
   .slide .item:nth-child(2) .content{
     display: block;
   }
+
+  .item .content{
+    position: absolute;
+    top: 30%;
+    right: 20px;
+    width: 220px;
+    height: 270px;
+    text-align: left;
+    color: #eee;
+    transform: translate(0, -50%);
+    display: none;
+    background-color: #000;
+    border-radius: 20px;
+    padding: 2rem;
+  }
     
   .content .name{
     font-size: 40px;
@@ -1385,6 +1402,10 @@ input{
 
   .content .project-button:hover{
     box-shadow: 1px 1px 10px 1px #f4a460;
+  }
+
+  #buggif {
+    background-position: bottom;
   }
 
   .button{
@@ -1570,6 +1591,8 @@ input{
   .names-one::after{        
     margin-left: -0.3rem;
   }
+
+  
   
 }
 
@@ -1638,6 +1661,7 @@ input{
   #nav4{
     grid-area: nav4;
     z-index: 1001;
+    width: 5.4rem;   
   } 
 
   .skill-box{
@@ -1727,10 +1751,21 @@ input{
     margin-bottom: 1rem;
     margin-top: 1rem;
   }
+
+ 
 }
 
 
 @media (max-width: 350px){
+
+
+  .nav-button{
+    font-size: 0.7rem;
+  }
+  /* .nav-button:nth-child(4){
+    padding-left: -0.4rem;
+  } */
+
   .project-container{
     width: 510px;
     height: 600px;

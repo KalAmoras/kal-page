@@ -218,19 +218,19 @@ const Resume = ({language}) => {
                         top: `${cardId === 1 ? '0' : '30' }rem`,
                         borderTop:  `${cardId ===1 ? '1px solid sandybrown' : '0px solid sandybrown'}`,
                         borderBottom:  `${cardId ===1 ? '0px solid sandybrown' : '1px solid sandybrown'}`                        
-                    }}>Personal Info</div>
+                    }}>Info Pessoal</div>
                     <div className="resume-content">
                         <ul className='list-title'>Cássio Jacques Santos Amoras
                             <li className='list-item-job'>Desenvolvedor JavaScript Fullstack</li>
                             <li className='list-item-job'>Programador e Designer</li>
                             <li className='list-item'>Data de nascimento: 29/09/1988</li>
-                            <li className='list-item'>Nationality: Brazil</li>
+                            <li className='list-item'>Nacionalidade: Brasil</li>
                             <li className='list-item'>Residência: São Paulo</li>
                             <li>
-                                <a href={cv} id='download-link' download={cv}>Currículo para download</a>
+                                <a href={cv} id='download-link' download={cv} style={{visibility: `${cardId===1? 'visible': 'hidden'}`}}>Currículo para download</a>
                             </li>
                             <li>
-                                <a href={cv2} id='download-link' download={cv2}>Certificados para download</a>                   
+                                <a href={cv2} id='download-link' download={cv2}  style={{visibility: `${cardId===1? 'visible': 'hidden'}`}}>Certificados para download</a>                   
                             </li>
                                    
                         </ul>
