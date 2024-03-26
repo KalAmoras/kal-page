@@ -208,7 +208,7 @@ input{
 
   .project-section{
     margin-top: clamp(16rem, 17rem + 10vh, 24rem);
-    margin-bottom: clamp(16rem, 17rem + 10vh, 24rem);
+    margin-bottom: clamp(14rem, 14rem + 10vh, 20rem);
    }
 
   .project-header{ 
@@ -709,28 +709,33 @@ input{
     font-size: clamp(0.7rem, 0.5rem + 1vw, 1rem);
     font-weight: 200;
   }
-  .list-item:nth-child(3){
+  /* .list-item:nth-child(3){
     margin-top: 2rem;
-  }
-  .list-item:nth-child(5){
-    margin-bottom: 2rem;
+  } */
+  .list-item:nth-child(4){
+    margin-bottom: 3rem;
   }
 
   .list-item-job{
-    font-size: clamp(0.9rem, 0.6rem + 1vw, 1.4rem);
+    font-size: clamp(0.7rem, 0.5rem + 1vw, 1rem);
     font-weight: 400;
     line-height: clamp(1rem, 0.5rem + 2vw, 1.8rem);
+    margin-bottom: 1rem;
+    text-wrap: wrap;
+    max-width: 300px;
 
   }
 
-  .list-item-job:nth-child(2){
+  .list-item-job:nth-child(1){
+  }
+
+  /* .list-item-job:nth-child(2){
    margin-bottom: 1rem;
-  }
+  } */
   
   #download-link{
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     color: white;
-
   }
 
 /*CONTACT-----------------------------------------------------------------------------------------------------------------------------*/

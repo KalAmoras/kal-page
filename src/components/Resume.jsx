@@ -8,7 +8,8 @@ const Resume = ({language}) => {
 
     const [cardId, setCardId] = useState(1)
     
-    
+    const resumePort = `Desenvolvedor JavaScript Fullstack,
+                        Programador e Designer`
     
     const handleClick = (id) => {  
         let currentId = cardId
@@ -111,7 +112,7 @@ const Resume = ({language}) => {
                     }}>Personal Info</div>
                     <div className="resume-content">
                         <ul className='list-title'>Cássio Jacques Santos Amoras
-                            <li className='list-item'>Fullstack JavaScript Developer, Coder and Designer</li>
+                            <li className='list-item-job'>Fullstack JavaScript Developer, Coder and Designer</li>
                             <li className='list-item'>Birthdate: 09/29/1988</li>
                             <li className='list-item'>Nationality: Brazil</li>
                             <li className='list-item'>Residency: São Paulo</li>
@@ -221,8 +222,10 @@ const Resume = ({language}) => {
                     }}>Info Pessoal</div>
                     <div className="resume-content">
                         <ul className='list-title'>Cássio Jacques Santos Amoras
-                            <li className='list-item-job'>Desenvolvedor JavaScript Fullstack</li>
-                            <li className='list-item-job'>Programador e Designer</li>
+                            {/* <li className='list-item-job'>Desenvolvedor JavaScript Fullstack</li>
+                            <li className='list-item-job'>Programador e Designer</li> */}
+                            <li className='list-item-job'>{resumePort}</li>
+                           
                             <li className='list-item'>Data de nascimento: 29/09/1988</li>
                             <li className='list-item'>Nacionalidade: Brasil</li>
                             <li className='list-item'>Residência: São Paulo</li>
