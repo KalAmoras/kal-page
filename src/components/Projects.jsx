@@ -64,7 +64,7 @@ const Projects = ({language}) => {
               <div className="content">
                   <div className="name">Route Tracker</div>
                   <div className="des">
-                    {language===1? `A geolocation and route tracker made with React and Leaflet.` : `Rastreador de geolocaliação e rotas feito com React e Leaflet.`}
+                    {language===1? `A geolocation and route tracker made with React and Leaflet.` : `Rastreador de geolocalização e rotas feito com React e Leaflet.`}
                   </div>
                   <a className='project-button' href= "https://routetracker.github.io/route-tracker/" target="_blank" rel="noopener noreferrer">
                     {language===1? `Try it out!` : `Experimente!`} 
