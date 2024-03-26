@@ -16,6 +16,10 @@ const Resume = ({language}) => {
         setCardId(id)
     }
 
+    useEffect(()=>{
+        console.log(cardId)
+    },[cardId])
+
   return (
     <>
         {language===1?
@@ -116,10 +120,10 @@ const Resume = ({language}) => {
                             <li className='list-item'>Birthdate: 09/29/1988</li>
                             <li className='list-item'>Nationality: Brazil</li>
                             <li className='list-item'>Residency: São Paulo</li>
-                            <li>
+                            <li className='resume-download'   style={{visibility: `${cardId===1? 'visible': 'hidden'}`}}>
                                 <a href={cv} id='download-link' download={cv}>Resume Download</a> 
                             </li>
-                            <li>
+                            <li className='resume-download'   style={{visibility: `${cardId===1? 'visible': 'hidden'}`}}>
                                 <a href={cv2} id='download-link' download={cv2}>Certificates Download</a>                                   
                             </li>
                         </ul>
@@ -222,18 +226,16 @@ const Resume = ({language}) => {
                     }}>Info Pessoal</div>
                     <div className="resume-content">
                         <ul className='list-title'>Cássio Jacques Santos Amoras
-                            {/* <li className='list-item-job'>Desenvolvedor JavaScript Fullstack</li>
-                            <li className='list-item-job'>Programador e Designer</li> */}
                             <li className='list-item-job'>{resumePort}</li>
                            
                             <li className='list-item'>Data de nascimento: 29/09/1988</li>
                             <li className='list-item'>Nacionalidade: Brasil</li>
                             <li className='list-item'>Residência: São Paulo</li>
-                            <li>
-                                <a href={cv} id='download-link' download={cv} style={{visibility: `${cardId===1? 'visible': 'hidden'}`}}>Currículo para download</a>
+                            <li className='resume-download'   style={{visibility: `${cardId===1? 'visible': 'hidden'}`}}>
+                                <a href={cv} id='download-link' download={cv}>Currículo para download</a>
                             </li>
-                            <li>
-                                <a href={cv2} id='download-link' download={cv2}  style={{visibility: `${cardId===1? 'visible': 'hidden'}`}}>Certificados para download</a>                   
+                            <li className='resume-download'  style={{visibility: `${cardId===1? 'visible': 'hidden'}`}}>
+                                <a href={cv2} id='download-link' download={cv2}>Certificados para download</a>                   
                             </li>
                                    
                         </ul>
