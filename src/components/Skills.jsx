@@ -272,8 +272,10 @@ const Skills = ({language}) => {
             </div>
           </div>
           <div className='screen-interior'>
-            <div className='skill-text'>{language===1? `Kotlin was the very first language I've learned building an BMI Calculator android app.` 
-              : `Kotlin foi a primeira linguagem que aprendi construindo um aplicativo android Calculadora de IMC.`}</div>
+            <div className='skill-text'>{language===1? `Kotlin was the very first language I've learned building an BMI Calculator android app. InLocker was also made in Kotlin, 
+                exploring all the possibilities the system can offer.` 
+              : `Kotlin foi a primeira linguagem que aprendi construindo um aplicativo android Calculadora de IMC. Inlocker também foi feito com Kotlin,
+                explorando todas as possibilidades que o sistema oferece.`}</div>
             <div className='skill-text'></div>  
           </div>
 

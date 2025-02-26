@@ -1,71 +1,48 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef } from 'react';
 import './Desainer.css';
 
+const Splash = ({ splashId, content, language }) => {
+  const splashTextRef = useRef(null);
+  const reflectionRef = useRef(null);
+  const containerRef = useRef(null);
 
-const Splash = ({splashId, setSplashId, content, language}) => {  
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight - 200 && rect.bottom > 0;
 
-  let body = document.querySelector('html').getBoundingClientRect().top
-  
-  let hidden = document.querySelector('.hidden')
-  let hiddenReflect = document.querySelector('.hidden-reflect')
-  
-  let removeSplashOne = document.querySelector('#splash-text1')
-  let removeReflectOne = document.querySelector('#reflection1')
-  let splashTwo = document.querySelector('#splash-text2')
-  let reflectTwo = document.querySelector('#reflection2')
+      if (splashTextRef.current && reflectionRef.current) {
+        if (isVisible) {
+          splashTextRef.current.classList.add('show');
+          reflectionRef.current.classList.add('show-reflect');
+        } else {
+          splashTextRef.current.classList.remove('show');
+          reflectionRef.current.classList.remove('show-reflect');
+        }
+      }
+    };
 
-  let splashOneCon = document.querySelector('.splash-container1')
-  let splashTwoCon = document.querySelector('.splash-container2')
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
 
-  let splashOneTop = splashOneCon?.getBoundingClientRect().top - body 
-  let splashOneBot = splashOneCon?.getBoundingClientRect().bottom - body 
-  let splashTwoTop = splashTwoCon?.getBoundingClientRect().top - body 
-  let splashTwoBot = splashTwoCon?.getBoundingClientRect().bottom - body 
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-  let viewport = window.matchMedia("(max-width: 450px)")
-
-
-
-  useEffect(()=>{
-    if(splashOneTop + body -400 < 0 && splashOneBot + body > 0 ){
-      hidden.classList.add('show')
-      hiddenReflect.classList.add('show-reflect')
-    }else{
-      removeSplashOne?.classList.remove('show')
-      removeReflectOne?.classList.remove('show-reflect')
-    }
-
-
-    if(splashTwoTop + body - 700 < 0 && splashTwoBot + body > 0){
-      splashTwo.classList.add('show')
-      reflectTwo.classList.add('show-reflect')
-    }else{
-      splashTwo?.classList.remove('show')
-      reflectTwo?.classList.remove('show-reflect')
-    }
-  })
-
-  
   return (
-    <div className={`splash-container${splashId}`}>
+    <div ref={containerRef} className={`splash-container${splashId}`}>
       <div className={`splash${splashId}`}>
-        <div className="hidden" id={`splash-text${splashId}`}
-        style={{fontSize:`${language===2 && viewport.matches? `1.7rem` : `clamp(2rem, 9vw , 50px)`}`,
-        height:`${language===2 ? `130px` : `110px`}`
-        }}>
-            {content}
-        </div>
-      </div>   
-      <div className={`splash-reflect${splashId === 2? "2" : ""}`}      >
-        <div className='hidden-reflect' id={`reflection${splashId}`} 
-        style={{fontSize:`${language===2 && viewport.matches? `1.7rem` : `clamp(2rem, 9vw , 50px)`}`,
-        height:`${language===2 ? `120px` : `90px`}`
-        }}>
+        <div ref={splashTextRef} className="hidden" id={`splash-text${splashId}`}>
           {content}
         </div>
-      </div>  
-  </div>
+      </div>
+      <div className={`splash-reflect${splashId === 2 ? "2" : ""}`}>
+        <div ref={reflectionRef} className="hidden-reflect" id={`reflection${splashId}`}>
+          {content}
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default Splash
+export default Splash;

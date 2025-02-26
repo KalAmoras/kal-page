@@ -71,6 +71,16 @@ const Projects = ({language}) => {
                   </a>
               </div>
           </div>
+          <div className="item" id='inlockergif'>
+              <div className="content">
+                  <div className="name">InLocker</div>
+                  <div className="des">{language===1? `A device protection app made with Kotlin for Android. Set passwords individually for your apps.` 
+                                        : `App de proteção para dispositivos Android feito em Kotlin. Coloque senhas em apps individualmente.`}</div>
+                  <a className='project-button' href= "https://github.com/KalAmoras/inlocker/tree/main" target="_blank" rel="noopener noreferrer">
+                    {language===1? `Try it out!` : `Experimente!`} 
+                  </a>
+              </div>
+          </div>
           <div className="item" id='cookgif'>
               <div className="content">
                   <div className="name">Overturner</div>

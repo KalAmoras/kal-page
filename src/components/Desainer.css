@@ -337,9 +337,17 @@ input{
     background-position: center;
   }
 
+  #inlockergif{
+    background-image: url('../assets/inlocker.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:auto;
+    background-color: #000;
+  }
   #cookgif{
     background-color: #000;
   }
+ 
 
   
   @keyframes animate {
@@ -392,7 +400,7 @@ input{
   }
   
   
-
+/*PROJECTS SECONDARY*/
 
 
 
@@ -729,9 +737,6 @@ input{
   .list-item-job:nth-child(1){
   }
 
-  /* .list-item-job:nth-child(2){
-   margin-bottom: 1rem;
-  } */
   
   #download-link{
     /* margin-top: 1rem; */
@@ -799,61 +804,7 @@ input{
     font-weight: 300;
 
   }
-/* 
-  .circle-resume{
-    border: 2px solid sandybrown;
-    color: sandybrown;
-    font-size: 3rem;
-    text-align: center;
-    line-height: 270px;
-    height: 280px;
-    width: 280px;
-    border-radius: 50%;
-    cursor: pointer;
-    margin-right: 4rem;
-    background: var(--dark-bg);
-    align-self: flex-start;
-    -webkit-user-select: none; 
-    -ms-user-select: none; 
-    user-select: none; 
-    }
 
-    .circle-resume:hover{
-      animation: circle-anime 0.3s linear forwards;
-    }
-
-    @keyframes resume-extender {
-      0%{
-        transform: scaleX(0%);
-      }
-      100%{
-        transform: scaleX(100%);  
-      }
-    }
-
-    @keyframes circle-anime {
-      0%{
-        background: radial-gradient(circle at center, sandybrown 0, black 0% 100%);
-      }
-      20%{
-        background: radial-gradient(circle at center, sandybrown 0 20% , black 20% 100%);
-      }
-      40%{
-        background: radial-gradient(circle at center, sandybrown 0 40% , black 40% 100%);
-      }
-      60%{
-        background: radial-gradient(circle at center, sandybrown 0 60% , black 60% 100%);
-      }
-      80%{
-        background: radial-gradient(circle at center, sandybrown 0 80% , black 80% 100%);
-      }
-      100%{
-        background: radial-gradient(circle at center, sandybrown 100%, black 100%);
-        color: var(--dark-bg);
-        font-size: 4rem;
-
-      }
-    } */
 
   /*IMMERSING ANIMATION-----------------------------------------------------------------------------------------------------------------------------*/
 
@@ -935,6 +886,7 @@ input{
   .show-reflect{
     height: 180px;
     opacity: 1;
+    display: block;
     filter: blur(0);
     transform: rotateX(180deg);
     animation: descension 1.5s linear forwards, immersion-reflect 2.6s linear 3s forwards;
@@ -1351,8 +1303,7 @@ input{
   }
   .slide .item:nth-child(5){
     left: calc(63% + 440px);
-  }
-  
+  }  
   .slide .item:nth-child(n + 6){
     left: calc(63% + 660px);
     opacity: 0;

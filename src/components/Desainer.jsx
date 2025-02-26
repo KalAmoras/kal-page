@@ -9,7 +9,7 @@ import Contact from './Contact';
 import brflag from '../assets/brflag.svg'
 import usflag from '../assets/usflag.svg'
 
-
+//TODO: Add InLocker gif to Projects, change Projects to Mondriani, correct navbar lines
 
 const Desainer = () => {
   const [scrollPosition, setScrollPosition] = useState(0)
@@ -102,14 +102,11 @@ const Desainer = () => {
         language={language}
       />  
 
-      <Projects language={language}/>
-        
-      
-      <Skills language={language}/>       
-      
-      <Resume
-      language={language}/>
+      <Projects language={language}/> 
+      <Skills language={language}/>    
+      <Resume language={language}/>
 
+     
       <Splash splashId={2}
         setSplashId={setSplashId}
         content={`${splashId[1]}`}
@@ -118,21 +115,22 @@ const Desainer = () => {
 
       <Contact language={language}/>          
 
-      <div className="circle"></div>      
-      <svg>
-          <defs>
-          <filter id="turbulence">
-            <feTurbulence type="turbulence" baseFrequency="0.01 0.05" numOctaves="2" result="NOISE"></feTurbulence>
-            <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="30">
-            </feDisplacementMap>
-          </filter>
-          <filter id="turbulence2">
-            <feTurbulence type="turbulence" baseFrequency="0.1 0.05" numOctaves="10"  seed="5" result="NOISE"></feTurbulence>
-            <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="30">
-            </feDisplacementMap>
-          </filter>
-         </defs>
-      </svg>
+      <div className="circle"></div>    
+     
+        <svg>
+            <defs>
+            <filter id="turbulence">
+              <feTurbulence type="turbulence" baseFrequency="0.01 0.05" numOctaves="2" result="NOISE"></feTurbulence>
+              <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="30">
+              </feDisplacementMap>
+            </filter>
+            <filter id="turbulence2">
+              <feTurbulence type="turbulence" baseFrequency="0.1 0.05" numOctaves="10"  seed="5" result="NOISE"></feTurbulence>
+              <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="30">
+              </feDisplacementMap>
+            </filter>
+          </defs>
+        </svg>
       </div>)
       :
       (<div className="wrapper">
@@ -164,9 +162,7 @@ const Desainer = () => {
         language={language}
       />  
       <Projects language={language}/>
-
-      <Skills language={language}/>        
-      
+      <Skills language={language}/>     
       <Resume
       language={language}/>
 
