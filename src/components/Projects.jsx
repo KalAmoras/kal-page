@@ -107,44 +107,195 @@ export default Projects;
 
 
 
+// .project-section{
+//   margin-top: clamp(16rem, 17rem + 10vh, 24rem);
+//   margin-bottom: clamp(14rem, 14rem + 10vh, 20rem);
+//  }
+
+// .project-header{ 
+//   font-size: clamp(2rem, 2vw + 2rem, 6rem);    
+//   color: var(--dark-primary);     
+//   text-align: center;
+//   font-weight: 500;
+//   margin-bottom: 6rem;  
+//   scroll-margin-top: 2rem;    
+// }
+
+// .project-container{
+//   margin-top: clamp(1rem, 1rem + 3vh, 2rem);
+//   transform: translate(0%, 0%);
+//   width: 1000px;
+//   height: 600px;
+//   align-self: center;
+//   border-left: #f4a460;
+//   border-radius: 30px;
+// }
+
+// .project-container .slide .item{
+//   width: 200px;
+//   height: 300px;
+//   position: absolute;
+//   top: 50%;
+//   transform: translate(0, -50%);
+//   border-radius: 20px;
+//   box-shadow: 0 2px 1rem 2px #505050;
+//   background-position: 50% 50%;
+//   background-size: cover;
+//   display: inline-block;
+//   transition: 0.5s;
+// }
+
+// .slide .item:nth-child(1),
+// .slide .item:nth-child(2){
+//   top: 0;
+//   left: 0;
+//   transform: translate(0, 0);
+//   border-radius: 0;
+//   width: 60%;
+//   height: 100%;
+//   border-radius: 30px;
+// }
+
+
+// .slide .item:nth-child(3){
+//   left: 63%;
+// }
+// .slide .item:nth-child(4){
+//   left: calc(63% + 220px);
+// }
+// .slide .item:nth-child(5){
+//   left: calc(63% + 440px);
+// }
+
+// .slide .item:nth-child(n + 6){
+//   left: calc(63% + 660px);
+//   opacity: 0;
+// }  
+
+
+// .item .content{
+//   position: absolute;
+//   top: 50%;
+//   right: 1px;
+//   width: 280px;
+//   height: 320px;
+//   text-align: left;
+//   color: #eee;
+//   transform: translate(0, -50%);
+//   display: none;
+//   background-color: #000;
+//   border-radius: 20px;
+//   padding: 2rem;
+// }  
+
+// .slide .item:nth-child(2) .content{
+//   display: block;
+// }
+  
+// .content .name{
+//   font-size: 40px;
+//   text-transform: uppercase;
+//   font-weight: bold;
+//   opacity: 0;
+//   animation: animate 1s ease-in-out 1 forwards;
+//   margin-top: 1rem;
+// }
+
+// .content .des{
+//   margin-top: 10px;
+//   opacity: 0;
+//   animation: animate 1s ease-in-out 0.3s 1 forwards;
+// }
+
+// .content .project-button{
+//   position: absolute;
+//   bottom: 10px;
+//   padding: 10px 20px;
+//   border: none;
+//   cursor: pointer;
+//   opacity: 0;
+//   animation: animate 1s ease-in-out 0.6s 1 forwards;
+//   border-radius: 20px;
+//   background-color:#f4a460;
+//   color: black;
+//   font-weight: 500;
+//   text-decoration: none;
+// }
+
+// .content .project-button:hover{
+//   box-shadow: 1px 1px 10px 1px #f4a460;
+// }
+
+// #buggif{
+//   background-image: url('../assets/bugranger.gif');
+//   background-size: contain;
+//   background-repeat: no-repeat;
+// }
+
+// #routegif{
+//   background-image: url('../assets/routetracker.gif');
+//   background-repeat: no-repeat;
+//   background-position: center;
+// }
+
+// #inlockergif{
+//   background-image: url('../assets/inlocker.gif');
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size:auto;
+//   background-color: #000;
+// }
+// #cookgif{
+//   background-color: #000;
+// }
 
 
 
-// const [currentIndex, setCurrentIndex] = useState(0);
-// const numCards = 4; 
-// const visibleCards = 3; 
+// @keyframes animate {
+//   from{
+//       opacity: 0;
+//       transform: translate(0, 100px);
+//       filter: blur(33px);
+//   }
 
-// const nextCard = () => {
-//   setCurrentIndex((prevIndex) => (prevIndex === numCards - 1 ? 0 : prevIndex + 1));
-// };
+//   to{
+//       opacity: 1;
+//       transform: translate(0);
+//       filter: blur(0);
+//   }
+// }
 
-// const prevCard = () => {
-//   setCurrentIndex((prevIndex) => (prevIndex === 0 ? numCards - 1 : prevIndex - 1));
-// };
 
-// return (
-//   <div className="project-section">
-    // <h1 className='project-header' id='project-header'>My Projects</h1>
 
-//     <div className="project-wrapper">
-//       <div className='project-active'>
-//         <p>TEST</p>
-//       </div>
-//       <div className="project-box">
-//         <div className="project-slider" style={{ width: `${visibleCards * 220}px` }}>
-//           {Array.from({ length: visibleCards * 2 }).map((_, index) => {
-//             const cardIndex = (currentIndex + index) % numCards;
-//             return (
-//               <div key={index} className="project-card">
-//                 Card {cardIndex + 1}
-//               </div>
-//             );
-//           })}
-//         </div>
-//         <button className="prev" onClick={prevCard}>&#10094;</button>
-//         <button className="next" onClick={nextCard}>&#10095;</button>
-//       </div>
-//     </div>
-//   </div>
-// );
-// };
+// .button{
+//   width: 100%;
+//   text-align: center;
+//   position: absolute;
+//   bottom: 20px;
+//   right: -230px;
+// }
+
+// .button button{
+//   width: 80px;
+//   height: 70px;
+//   border: none;
+//   cursor: pointer;
+//   margin: 0 5px;
+//   transition: 0.3s;
+//   background-color: #f4a460;
+//   color: #000;
+//   font-size: 2rem;
+// }
+
+// .button button:nth-child(1){
+//   border-radius: 50px 0px 0px 50px;
+// }
+
+// .button button:nth-child(2){
+//     border-radius: 0px 50px 50px 0px;
+// }
+
+// .button button:hover{
+//   background: #ababab;
+//   color: #fff;
+// }

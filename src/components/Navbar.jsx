@@ -5,7 +5,7 @@ const Navbar = ({language}) => {
   let body = document.querySelector('html').getBoundingClientRect().top
  
   let about = document.querySelector('.about')
-  let projects = document.querySelector(".project-header")
+  let projects = document.querySelector(".project-header-two")
   let skills = document.querySelector(".skill-header")
   let resume = document.querySelector(".resume-header")
   let contact = document.querySelector(".contact-header")
@@ -16,7 +16,7 @@ const Navbar = ({language}) => {
   let resumeTop = resume?.getBoundingClientRect().top - body
   let contactTop = contact?.getBoundingClientRect().top - body   
 
-  const viewport = window.matchMedia("(max-width: 800px)")
+  const viewport = window.matchMedia("(max-width: 1100px)")
 
   const portMatch = viewport.matches
 
@@ -44,8 +44,8 @@ const Navbar = ({language}) => {
     borderLeft:'0px solid var(--dark-primary)' ,
     borderBottom:'1px solid var(--dark-primary)' ,
     borderRight:'0px solid var(--dark-primary)',
-    fontSize: `${language === 1 ? '0.66rem' : '0.65rem' }`,
-    paddingRight: `${language === 1 ? '0rem' : '0.6rem' }`,
+    // fontSize: `${language === 1 ? '0.66rem' : '0.65rem' }`,
+    // paddingRight: `${language === 1 ? '0rem' : '0.6rem' }`,
   }
 
 
@@ -62,15 +62,14 @@ const Navbar = ({language}) => {
     borderLeft:'1px solid var(--dark-primary)' ,
     borderBottom:'0px solid var(--dark-primary)' ,
     borderRight:'1px solid var(--dark-primary)',
-    fontSize: `${language === 1 ? '0.66rem' : '0.65rem' }`,
-    paddingRight: `${language === 1 ? '0rem' : '0.3rem' }`,
+    // fontSize: `${language === 1 ? '0.66rem' : '0.65rem' }`,
+    // paddingRight: `${language === 1 ? '0rem' : '0.3rem' }`,
     zIndex: '1006' 
   }
 
   return (
     <>
       <div className='navbar' >
-        <div className='tabline-one'></div>
         <div className="nav-button" id="nav1" onClick={()=>handleClick('about')}           
             style={aboutBounding && portMatch ? stylePortActive 
               : aboutBounding && !portMatch ? styleActive
@@ -101,7 +100,6 @@ const Navbar = ({language}) => {
               : !contactBounding && portMatch ? stylePort
               : style }
         >{language===1? "Contact" : "Contato"}</div>
-        <div className='tabline-two'></div>
       </div>
     </>
   )

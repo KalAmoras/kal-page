@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react'
 import './Desainer.css'
 import Projects from './Projects';
+import Projects2 from './Projects2';
 import Splash from './Splash';
 import Skills from './Skills';
 import Navbar from './Navbar';
@@ -102,7 +103,9 @@ const Desainer = () => {
         language={language}
       />  
 
-      <Projects language={language}/> 
+      <Projects2 language={language}/> 
+
+      {/* <Projects language={language}/>  */}
       <Skills language={language}/>    
       <Resume language={language}/>
 
@@ -161,7 +164,9 @@ const Desainer = () => {
         content={`${splashId[2]}`}
         language={language}
       />  
-      <Projects language={language}/>
+      <Projects2 language={language}/> 
+
+      {/* <Projects language={language}/> */}
       <Skills language={language}/>     
       <Resume
       language={language}/>
